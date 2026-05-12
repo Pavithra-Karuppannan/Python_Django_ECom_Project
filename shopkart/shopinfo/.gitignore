@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+git rm --cached shopkart/db.sqlite3
+media/
+staticfiles/
+db.sqlite3
+static/uploads/
