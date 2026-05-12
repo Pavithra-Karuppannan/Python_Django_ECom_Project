@@ -12,7 +12,7 @@
 ### Product Page:
      ![Product Page](shopkart/Readme_Images/Products.png)
 ### Cart Page:
-     ![Home Page](shopkart/Readme_Images/cart_Image.png)
+     ![Cart Image](shopkart/Readme_Images/cart_Image.png)
 
 ### Features:
     * Register
