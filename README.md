@@ -30,6 +30,5 @@ A full-stack E-Commerce web application built using Python and Django. The proje
 * Customer can also add/remove product to cart (if customer try to add same product in cart. It will add only once and shows warning message).
     
 ### Feedback:
-Any suggestion and feedback is welcome. You can message me on Linkedin
-[PavithraK](www.linkedin.com/in/pavithra-karuppannan)
+Any suggestion and feedback is welcome. You can message me on Linkedin [PavithraK](www.linkedin.com/in/pavithra-karuppannan)
 
