@@ -31,5 +31,5 @@ A full-stack E-Commerce web application built using Python and Django. The proje
     
 ### Feedback:
 Any suggestion and feedback is welcome. You can message me on Linkedin
-[LinkedIn](www.linkedin.com/in/pavithra-karuppannan)
+[PavithraK](www.linkedin.com/in/pavithra-karuppannan)
 
