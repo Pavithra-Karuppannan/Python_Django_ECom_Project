@@ -133,3 +133,22 @@ def productDetails(request,cname,pname):
     else:
       messages.error(request,"No Such Catagory Found")
       return redirect('products')
+
+def search_view(request):
+    # whatever user write in search box we get in query
+    query = request.GET['query']
+    products=Products.objects.all().filter(product_name__icontains=query).select_related('category')
+    if 'product_ids' in request.COOKIES:
+        product_ids = request.COOKIES['product_ids']
+        counter=product_ids.split('|')
+        product_count_in_cart=len(set(counter))
+    else:
+        product_count_in_cart=0
+
+    # word variable will be shown in html when user click on search button
+    word="Searched Result :"
+
+    if request.user.is_authenticated:
+        return render(request,'shop/searchResult.html',{'products':products,'query':query,'word':word,})
+    #return render(request,'ecom/index.html',{'products':products,'word':word,'product_count_in_cart':product_count_in_cart})
+

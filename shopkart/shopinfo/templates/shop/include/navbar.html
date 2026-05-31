@@ -1,22 +1,42 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-cart-plus"></i> Shopkart</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="navbar-nav ms-auto  ">
-          <a class="nav-link" aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
-          {% if request.user.is_authenticated %}
-            <a class="nav-link" aria-current="page" href="#"><i class="fa fa-user"></i> {{request.user}}</a>
-            <a class="nav-link" aria-current="page" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout</a>
-          {% else %}
-            <a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
-            <a class="nav-link" href="{% url 'register' %}"><i class="fa fa-users"></i> Register</a>
-          {% endif %}
-            <a class="nav-link" href="{% url 'products' %}"><i class="fa fa-cubes"></i> Products</a>
-            <a class="nav-link" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
-            <a class="nav-link" href="{% url 'favviewpage' %}"><i class="fa fa-heart"></i> Favourite</a>
-    </div>
-  </div>
+  <div class="container d-flex align-items-center justify-content-between">
+   
+    <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <i class="fa fa-cart-plus"></i> Shopkart
+      </a>
+    <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <!-- Search bar inline on the right -->
+        <form class="d-flex ms-auto" action="/search" method="get" style="width:550px;" action="/search" method="get">
+        <input class="form-control me-1" type="search" 
+               placeholder="Search for Products, Brands and more" 
+               name="query" id="query" style="border-color: pink;">
+        <button class="btn btn-light" type="submit" style="border-color: blue;color:#ffc107;">
+          <svg width="15px" height="15px" viewBox="0 0 13 13">
+            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467"/>
+          </svg>
+        </button>
+      </form>
+    
+    <!-- Nav links + Search together -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto  ">
+            <a class="nav-link" aria-current="page" href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+            {% if request.user.is_authenticated %}
+              <a class="nav-link" aria-current="page" href="#"><i class="fa fa-user"></i> {{request.user}}</a>
+              <a class="nav-link" aria-current="page" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout</a>
+            {% else %}
+              <a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Login</a>
+              <a class="nav-link" href="{% url 'register' %}"><i class="fa fa-users"></i> Register</a>
+            {% endif %}
+              <a class="nav-link" href="{% url 'products' %}"><i class="fa fa-cubes"></i> Products</a>
+              <a class="nav-link" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a>
+              <a class="nav-link" href="{% url 'favviewpage' %}"><i class="fa fa-heart"></i> Favourite</a>
+        </div>
+      </div>
+    </div><br>
 </nav>
