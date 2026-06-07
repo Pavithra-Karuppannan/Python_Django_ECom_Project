@@ -8,7 +8,7 @@ A full-stack E-Commerce web application built using Python and Django. The proje
 ## Screenshots:
 
 ### Home Page:
-![Home Page](shopkart/Readme_Images/Home_new.png)
+![Home Page](shopkart/Readme_Images/Home_New.png)
 ### Product Page:
 ![Product Page](shopkart/Readme_Images/Products.png)
 ### Cart Page:
